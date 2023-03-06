@@ -13,13 +13,15 @@ function createGalleryItemElMarkup(items) {
 	return items
 		.map(
 			item => `
-            <a class="gallery__item" href="${item.original}">
-                <img 
-                    class="gallery__image" 
-                    src="${item.preview}" 
-                    alt="${item.description}" 
-                />
-            </a>`,
+			<li>
+				<a class="gallery__item" href="${item.original}">
+					<img 
+						class="gallery__image" 
+						src="${item.preview}" 
+						alt="${item.description}"
+					/>
+				</a>
+			</li>`,
 		)
 		.join("");
 }
